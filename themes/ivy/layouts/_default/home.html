@@ -1,0 +1,76 @@
+<!--{{ partial "header.html" . }}
+
+{{ .Content }}
+
+{{ if .IsHome }}
+{{ $.Scratch.Set "pages" .Site.RegularPages }}
+{{ else }}
+{{ $.Scratch.Set "pages" .Pages }}
+{{ end }}
+<ul>
+  {{ range (where ($.Scratch.Get "pages") "Section" "posts") }}
+  <li>
+    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
+
+{{ partial "footer-cus.html" . }}
+-->
+{{ partial "header.html" . }}
+{{ .Content }}
+<div class="d">
+  <div class="m1"><h3>作品集</h3>
+
+  <div class="shu" onclick="window.location.href='/categories/源笔记/';return false"><div class="t">源笔记</div></a></div>
+  <div class="shu" onclick="window.location.href='/categories/星夜集/';return false"><div class="t">星夜集</div></a></div>
+  <div class="shu" onclick="window.location.href='/categories/溪语录/';return false"><div class="t">溪语录</div></a></div>
+  <div class="shu" onclick="window.location.href='/categories/鲸鱼肚子的避难所/';return false"><div class="t">鲸之庇护</div></a></div>
+  </div>
+  <div class="m2"><h3>吃喝玩乐</h3>
+
+  <div class="shu" onclick="window.location.href='/categories/游记/';return false"><div class="t">游记</div></a></div> 
+  <div class="shu" onclick="window.location.href='/categories/美食/';return false"><div class="t">美食</div></a></div>
+  
+  </div>
+  <div class="m3"><h3>杂记</h3>
+  <div class="shu" onclick="window.location.href='/categories/杂记/';return false"><div class="t">杂记</div></a></div>
+
+  </div>
+</div>
+<div class="m4">{{ partial "footer.html" . }}</div>
+
+<style type="text/css">
+.d{float: left;
+}
+.m1,.m2,.m3,.m4{
+  clear: both;
+  padding-top: .1rem;
+}
+
+.shu{
+  padding-left: .8rem;
+  display: flex;
+  margin-left: 10px;
+  float: left;
+  border: 1px solid;
+  border-top: 1px solid ;
+  border-right: 6px solid rgba(78, 78, 78, 0.336);
+  border-left:  2px   solid;
+  
+  width: 100px;
+  height: 150px;
+  background-color: rgba(170, 172, 91, 0.336);
+  margin-top: 1rem;
+}
+.t{
+    font-size: 16px;
+    width: 18px;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    height: min-content;
+    padding: 2px 2px 2px 2px;
+    background-color: white;}
+   
+</style>
