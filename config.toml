@@ -1,4 +1,4 @@
-baseURL = "https://imroots.vercel.app/"
+baseURL = "https://imroots.github.io/"
 languageCode = "en-us"
 title = "上下左右"
 theme = "ivy"
@@ -11,18 +11,18 @@ footnotereturnlinkcontents = "↩"
   posts = "/posts/:year/:month/:slug/"
   newsletter = "/newsletter/:year/:month/:slug/"
 
-#[menu]
-#  [[menu.main]]
-#  name="写作"
-#  url="/categories/"
-#  weight="1"
+[menu]
+  [[menu.main]]
+  name="小工具"
+  url="//content/小工具/e.html"
+  weight="1"
 
   
 
 [params]
   # description abou this website
   description = "醉后不知天在水 满船清梦压星河"
-  footer = "&copy; [王上下](https://imroots.vercel.app) | @2018 - 2022"
+  footer = "&copy; [王上下](https://imroots.github.io) | @2018 - 2022"
   highlightjsCDN = "//cdn.bootcss.com"
   highlightjsLang = ["r", "yaml", "tex"]
   highlightjsTheme = "github"
