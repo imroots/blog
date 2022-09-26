@@ -13,8 +13,8 @@ footnotereturnlinkcontents = "↩"
 
 [menu]
   [[menu.main]]
-  name="小工具"
-  url="/content/小工具/e.html"
+  name=""
+  url="/"
   weight="1"
 
   
