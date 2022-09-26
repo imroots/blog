@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+---
+title: 'code'
+date: 2022-09-19 16:25:00
+categories: [小工具]
+published: true
+hideInList: true
+comment: true 
+isTop: true
+
+---
 <html>
 	<head>
 		<meta charset="utf-8" />
