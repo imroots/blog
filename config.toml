@@ -28,7 +28,7 @@ footnotereturnlinkcontents = "↩"
   highlightjsTheme = "github"
   highlightjsVersion = "9.12.0"
 [params.waline]
-	enable = true
+	enable = false
 
 [blackfriday]
 extensionsmask = [ "noIntraEmphasis" ]
