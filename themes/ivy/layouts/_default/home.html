@@ -1,0 +1,66 @@
+<!--{{ partial "header.html" . }}
+
+{{ .Content }}
+
+{{ if .IsHome }}
+{{ $.Scratch.Set "pages" .Site.RegularPages }}
+{{ else }}
+{{ $.Scratch.Set "pages" .Pages }}
+{{ end }}
+<ul>
+  {{ range (where ($.Scratch.Get "pages") "Section" "posts") }}
+  <li>
+    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
+
+{{ partial "footer-cus.html" . }}
+-->
+{{ partial "header.html" . }}
+{{ .Content }}
+<div class="d">
+  <div class="m1"><h3>作品集</h3>
+
+  <div class="shu" onclick="window.location.href='/categories/随笔/';return false"><div class="t">随笔</div></a></div>
+  <div class="shu" onclick="window.location.href='/categories/小说/';return false"><div class="t">小说</div></a></div>
+  <div class="shu" onclick="window.location.href='/categories/诗词集/';return false"><div class="t">诗词集</div></a></div>
+ 
+  </div>
+</div>
+<div class="m4">{{ partial "footer.html" . }}</div>
+
+<style type="text/css">
+.d{float: left;
+}
+.m1,.m3,.m4{
+  clear: both;
+  padding-top: .1rem;
+}
+
+.shu{
+  padding-left: .8rem;
+  display: flex;
+  margin-left: 10px;
+  float: left;
+  border: 1px solid;
+  border-top: 1px solid ;
+  border-right: 6px solid rgba(78, 78, 78, 0.336);
+  border-left:  2px   solid;
+  
+  width: 100px;
+  height: 150px;
+  background-color: rgba(56, 56, 56, 0.966);
+  margin-top: 1rem;
+}
+.t{
+    font-size: 16px;
+    width: 18px;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    padding-left: 1px;
+    height: min-content;
+    background-color: white;}
+    
+</style>
