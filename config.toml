@@ -31,6 +31,8 @@ footnotereturnlinkcontents = "↩"
 	enable = false
 [params.toc]
   enable = true
+[params.TocOpen]
+  enable = true 
 [blackfriday]
 extensionsmask = [ "noIntraEmphasis" ]
 fractions = false
@@ -45,4 +47,6 @@ unsafe = true
 autoHeadingIDType = "blackfriday"
 
 [markup.tableOfContents]
-startLevel = 1
+ startLevel = 2
+    endLevel = 4
+    ordered = false
